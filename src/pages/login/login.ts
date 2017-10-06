@@ -18,11 +18,12 @@ export class LoginPage {
 
   data:any = {};
 
+  //dataRes : any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private http : Http) {
     this.data.username = '';
     this.data.password = '';
     this.data.response = '';
-    
 
     this.http = http;
 
@@ -47,6 +48,7 @@ export class LoginPage {
     console.log(dataRes.usertype);
     console.log(dataRes.currentWeekNumber);
     console.log(dataRes.fullname);
+    
   }, error => {
     console.log("Oooops!");
     });
