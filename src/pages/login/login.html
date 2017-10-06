@@ -15,4 +15,32 @@
 
 <ion-content padding>
 
+   
+    <ion-list>
+        <ion-item>
+        <ion-label floating>Username</ion-label>
+        <ion-input type="email" name="username" [(ngModel)]="data.username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" name="password" [(ngModel)]="data.password" ></ion-input>
+            </ion-item>
+        
+        <button ion-button block (click)="login()">Login</button>
+        </ion-list>
+     
+     
+        
+        <ion-card>
+        <ion-card-header>
+        Response
+        </ion-card-header>
+        
+        <ion-card-content>
+        <b>{{this.data.response}}</b>  
+        <!-- <b>{{this.data.response.usertype}}</b>   -->
+        </ion-card-content>
+        </ion-card>
+
 </ion-content>
